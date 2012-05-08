@@ -43,9 +43,6 @@ module VPNWatch
     end
   
     def post_init
-      #send_data "test\n"
-      #pp ["sent", "test"]
-      #EM.add_timer(10) { post_init }
       @log.info("state #{state.inspect}")
       connected
       @log.info("state #{state.inspect}")
