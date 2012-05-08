@@ -1,0 +1,14 @@
+development: &development
+  cluster: cluster1
+  zookeeper:
+    server: 127.0.0.1
+    port: 2181
+  bean:
+    server: 127.0.0.1
+    port: 11300
+
+test: &test
+  <<: *development
+
+production: &production
+  <<: *development
