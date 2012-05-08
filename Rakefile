@@ -1,4 +1,5 @@
 # encoding: utf-8
+$:.unshift File.join(File.dirname(__FILE__), 'lib')
 
 require 'rubygems'
 require 'bundler'
@@ -13,6 +14,7 @@ require 'rake'
 
 unless ENV['ENV'] == 'production'
   require 'jeweler'
+  require 'vpn-watch'
   Jeweler::Tasks.new do |gem|
     # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
     gem.name = "vpn-watch"
@@ -22,6 +24,7 @@ unless ENV['ENV'] == 'production'
     gem.description = %Q{VPN-Watch is a high availability management solution for EC2 deployments of OpenVPN}
     gem.email = "artem@veremey.net"
     gem.authors = ["Artem Veremey"]
+    gem.version = VPNWatch::VERSION
   end
   Jeweler::RubygemsDotOrgTasks.new
 
