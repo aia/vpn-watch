@@ -1,16 +1,16 @@
 source "http://rubygems.org"
 
 gem "zk-eventmachine", "~> 1.0.0"
-gem "em-jack"
+gem "em-jack", "~> 0.1.5"
 gem "beanstalk-client"
-gem "foreman"
-gem "thor"
-gem "json"
-gem "ohai"
-gem "state_machine"
-gem "right_aws"
+gem "thor", ">= 0.13.6"
+gem "json", "~> 1.4"
+gem "ohai", "~> 0.6"
+gem "state_machine", "~> 1.1.2"
+gem "right_aws", "~> 3.0"
 
 group :development do
+  gem "foreman", "~> 0.46.0"
   gem "rspec", "~> 2.8.0"
   gem "yard", "~> 0.7"
   gem "rdoc", "~> 3.12"
