@@ -1,0 +1,17 @@
+development: &development
+  cluster: cluster1
+  server: 127.0.0.1
+  port: 11300
+  ec2:
+    key_id: your_aws_key_id
+    access_key: your_aws_access_key
+    region: us-west-2
+    route_table: rtb-XXXXX
+    routes: ["192.168.0.0/24", "192.168.1.0/30"]
+    elastic_ip: 50.50.50.50
+
+test: &test
+  <<: *development
+
+production: &production
+  <<: *development
