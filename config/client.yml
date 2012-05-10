@@ -7,6 +7,7 @@ development: &development
   node_name: test1
   openvpn:
     bin: vpn-watch/spec/mock/mock-openssh.rb
+    port: 7500
     command:
 
 test: &test

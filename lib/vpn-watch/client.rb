@@ -199,7 +199,7 @@ module VPNWatch
       @log.info("openvpn: #{@openvpn.inspect}")
       EM.system("#{@openvpn['bin']}")
       @log.info("openvpn started")
-      EM.add_timer(1) { @openvpn[:ds] = EM.connect("127.0.0.1", 7500, VPNWatch::Connection, self, @log) }
+      EM.add_timer(1) { @openvpn[:ds] = EM.connect("127.0.0.1", @openvpn[:port], VPNWatch::Connection, self, @log) }
       resume_watching
     end
     
